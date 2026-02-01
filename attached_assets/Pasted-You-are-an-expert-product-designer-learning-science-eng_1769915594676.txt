@@ -1,0 +1,193 @@
+You are an expert product designer, learning-science engineer, and senior full-stack Python developer who specializes in building beautiful, gamified learning apps that deploy reliably with minimal user effort.
+
+Build me a complete, production-ready interactive training app to master “The Strat” trading methodology (visual price-action pattern recognition). The app must be extremely visual: the user should never have to imagine anything. Every question must show a chart.
+
+CRITICAL DELIVERY REQUIREMENT (NON-NEGOTIABLE):
+- Deliver the result as ONE single downloadable ZIP archive.
+- The ZIP must contain a complete GitHub repository.
+- I should NOT have to write code, copy/paste code, or manually create files.
+- The repo must deploy cleanly on Streamlit Cloud.
+- Output ONLY the ZIP file as your final output.
+
+DEPLOYMENT & SHARING:
+- Platform: Streamlit (Python)
+- App must run with: `streamlit run app.py`
+- Include `requirements.txt`
+- Include a clear README with step-by-step instructions:
+  1) Create a GitHub repo
+  2) Upload the ZIP contents
+  3) Deploy on Streamlit Cloud
+- Deployment must be **PUBLIC and shareable via URL** (no login required for viewers).
+- Treat the public URL as “unlisted” (only accessible if someone has the link).
+- No authentication required.
+
+PRIMARY GOAL:
+Teach The Strat from absolute basics → full mastery using a step-by-step progression. The app must:
+- Measure mastery per topic
+- Automatically level the user up when mastery is achieved
+- Allow manual review of any topic at any time
+- Always generate NEW examples (never reuse the same question)
+- Give more practice when the user struggles or self-identifies as “not mastered”
+
+CURRICULUM (LOGICAL, MASTERY-GATED PROGRESSION):
+Stage 1 — Core Language
+1) Strat candle types: 1 (inside), 2U, 2D, 3 (outside)
+2) Sequences of candles (bar-by-bar classification)
+3) Visual context: trend vs chop
+
+Stage 2 — Continuity
+4) Timeframe continuity (single timeframe)
+5) Multi-timeframe continuity (synthetic higher/lower TF alignment)
+6) Full vs partial continuity and conflicts
+
+Stage 3 — Setups
+7) Inside bar (1) breakouts
+8) 2-1-2 reversals
+9) 3-2-2 reversals
+10) 1-2 continuations
+11) Failed setups / false breaks (confusers)
+
+Stage 4 — Execution
+12) Entries (break vs retrace)
+13) Stop placement (invalidations)
+14) Targets (R-multiple logic using synthetic volatility)
+15) Risk sizing scenarios
+16) Trade management logic
+
+Stage 5 — Mastery
+17) Mixed-mode exams
+18) Timed recognition drills
+19) Confuser pack (edge cases designed to trip users up)
+
+MASTERY SYSTEM:
+- Track mastery per topic using:
+  - Accuracy
+  - Consistency (recent streak)
+  - Difficulty weighting
+  - Confidence calibration
+- Automatically level up when mastery threshold is reached
+- Large neon + 8-bit celebration on level-up
+- Allow user controls:
+  - “I don’t feel mastered yet” button
+  - Manual review of any topic
+  - Reset topic mastery if desired
+
+QUESTION STYLE (STREAMLIT-RELIABLE ONLY):
+IMPORTANT: Avoid fragile click-on-chart or drag interactions.
+Use ONLY highly reliable interaction patterns.
+
+Include:
+1) Multiple-choice questions (A/B/C/D)
+2) “Select the correct entry / stop / target” using:
+   - clearly labeled candidate zones on the chart
+   - user selects the correct zone via buttons
+3) Timed mode (optional countdown)
+4) Confidence rating after every answer:
+   - Low / Medium / High
+   - Used in mastery scoring
+5) Reasoning reinforcement:
+   - short “why” explanations after feedback
+
+FEEDBACK:
+- Correct answer:
+  - Immediate positive reinforcement
+  - Neon glow animation
+  - 8-bit arcade sound
+- Wrong answer:
+  - Show the SAME chart again
+  - Overlay highlights and annotations
+  - Explain why the correct answer is correct
+  - Explain why the chosen answer is wrong
+- Include “Show rule” button revealing the definition visually
+
+SYNTHETIC CHART GENERATION (NO INTERNET):
+- Generate synthetic OHLC data in-app
+- Use intentional construction:
+  - Do NOT rely on random chance
+  - Ensure each chart cleanly represents the intended concept
+- Difficulty tiers:
+  - Easy (obvious)
+  - Medium (subtle)
+  - Hard (confusers designed to trick)
+- Always generate NEW examples (different seeds every time)
+
+VISUAL DESIGN (VERY IMPORTANT):
+Theme: 1980s NEON ARCADE
+- Dark mode only
+- Candles:
+  - Hot pink (bullish)
+  - Neon yellow-green (bearish)
+- Background:
+  - Black / deep purple
+- Accents:
+  - Neon cyan, magenta glow
+- Subtle CRT scanline effect (CSS)
+- Large, readable, high-contrast UI
+- Arcade-style typography (use locally packaged font if needed)
+- Polished but not cluttered
+
+SOUNDS (REQUIRED):
+- Vintage NES-style 8-bit sounds
+- Generate sounds programmatically (square/sine waves)
+- Sounds needed:
+  - Correct answer “coin/ding”
+  - Wrong answer “soft bump”
+  - Level-up fanfare
+  - Streak milestone chirp
+- Include sound ON/OFF toggle in settings
+- Sounds must work in Streamlit using HTML audio
+
+GAMIFICATION:
+- XP
+- Levels
+- Streaks
+- Combo multipliers
+- Badges
+- Daily challenge mode
+- Progress dashboard showing:
+  - mastery by topic
+  - weak areas
+  - confidence calibration
+
+PERSISTENCE (SIMPLE & RELIABLE):
+- Store user progress using Streamlit session state
+- Persist progress in the user’s browser (client-side storage) so refreshes don’t erase progress
+- Include:
+  - “Export progress” button (downloads JSON)
+  - “Import progress” button
+- Do NOT require accounts, databases, or external services
+
+PERFORMANCE & RELIABILITY:
+- Keep charts lightweight (short windows)
+- Cache generated assets
+- Avoid heavy animations
+- Ensure fast load times on Streamlit Cloud
+
+WELCOME / PRESS START SPLASH (REQUIRED):
+- On first launch, show a full-screen arcade splash:
+  - Title: “THE STRAT ARCADE”
+  - Subtitle: “Train your eyes. Level up. Become inevitable.”
+  - Large neon “PRESS START” button
+  - CRT scanline effect
+  - 8-bit start sound
+- Include a short visual “How it works”:
+  1) See a chart
+  2) Answer the question
+  3) Get feedback and level up
+- After pressing start, run a 3-question interactive tutorial:
+  - Candle identification
+  - Entry/stop/target selection
+  - Confidence rating
+- End tutorial with a celebration and badge
+- Store “tutorial completed” status per user
+
+ENGINEERING:
+- Clean repo structure
+- Clear comments
+- Type hints
+- No external APIs
+- No copyrighted assets
+
+FINAL OUTPUT:
+- Output ONLY the ZIP repository artifact.
+- The ZIP must be immediately deployable.
